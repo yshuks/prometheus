@@ -1,7 +1,7 @@
 FROM python:slim
 
 # name of developer
-LABEL maintainer=gouravsaini@sigmoidanalytics.com
+LABEL maintainer=rajat.rsigmoidanalytics.com
 
 # This is to work in the directory.
 WORKDIR /usr/local/src
