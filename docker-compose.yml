@@ -16,7 +16,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
     ports:
-      - 9090:9090
+      - 9091:9090
     restart: always
     # network_mode: host
 
@@ -25,7 +25,7 @@ services:
     image: grafana/grafana:latest
     container_name: grafana
     ports:
-      - 3000:3000
+      - 3007:3000
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
     depends_on:

@@ -1,19 +1,12 @@
-FROM python:slim
+FROM python
 
-# name of developer
-LABEL maintainer=rajat.rsigmoidanalytics.com
 
-# This is to work in the directory.
-WORKDIR /usr/local/src
+WORKDIR /usr/local/source
 
-# copy the requirement file to install the required packages. 
-COPY ./src/requirements.txt .
+COPY ./source/requirements.txt .
 
-# fire the run command to install the packages
 RUN pip3 install -r requirements.txt
 
-# copy the python code to run on container
-COPY ./src/app.py .
+COPY ./source/app.py .
 
-# run the python command to execute the python code
 CMD ["python" , "app.py"]
