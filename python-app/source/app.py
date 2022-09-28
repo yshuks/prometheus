@@ -32,7 +32,7 @@ def hello_world():
             prom['counter_var4'].set(cpu)
             prom['counter_var5'].set(cpu)
             yield 'CPU usage is : ' +  str(cpu) + ' -- ' + ' & Memory usage is : ' + str(rem) + '<br/>\n'
-            time.sleep(5)
+            time.sleep(10)
     return Response(inner(), mimetype='text/html')
 
 @app.route('/metrics')
