@@ -4,7 +4,7 @@ services:
     build: ./python-app
     container_name: python-app
     restart: always
-    # network_mode: host
+ 
     ports:
       - 5000:5000
 
@@ -18,7 +18,7 @@ services:
     ports:
       - 9091:9090
     restart: always
-    # network_mode: host
+    
 
 
   grafana:
@@ -31,5 +31,5 @@ services:
     depends_on:
       - prometheus
     restart: always
-    # network_mode: host
+   
 
