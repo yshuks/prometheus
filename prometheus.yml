@@ -8,3 +8,6 @@ scrape_configs:
   - job_name: "Python-app"
     static_configs:
       - targets: ["localhost:5000"]
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9091"]
